@@ -10,19 +10,19 @@ const { validId, validObjectBody } = require('../middlewares/card.middleware');
 
 
 //Rotas de Cards
-route.get('/all-cards',cardController.findAllCardsController)
-route.get('/one-card/:id', validId, cardController.findByIdCardController)
+router.get('/all-cards',cardController.findAllCardsController)
+router.get('/one-card/:id', validId, cardController.findByIdCardController)
 
-route.post('/create-card', validObjectBody, cardController.createCardController)
+router.post('/create-card', validObjectBody, cardController.createCardController)
 
-route.put('/update-card/:id', validId, validObjectBody, cardController.updateCardController)
+router.put('/update-card/:id', validId, validObjectBody, cardController.updateCardController)
 
-route.delete('/delete-card/:id', validId, validObjectBody, cardController.deleteCardController)
+router.delete('/delete-card/:id', validId, validObjectBody, cardController.deleteCardController)
 
 
 //eportar modulo
 
-module.exports = route
+module.exports = router
 
 
 
