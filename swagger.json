@@ -17,7 +17,7 @@
         "description": "API de teste"
       },
       {
-        "url": " https://landing-page-mortalcard.herokuapp.com/",
+        "url": "https://landing-page-mortalcards.herokuapp.com/",
         "description": "API de produção"
       }
     ],
