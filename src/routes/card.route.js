@@ -1,15 +1,13 @@
-const route = require('express').Router();
-const cardController = require('../controllers/card.controller');
+const express = require('express');
+const router = express.Router();
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../../swagger.json');
+const cardController = require('../controllers/card.controller');
 
 //validações das rotas
 const { validId, validObjectBody } = require('../middlewares/card.middleware');
 
 //Rotas do swagger
-route.use('/api-docs', swaggerUi.serve);
-route.get('/api-docs', swaggerUi.setup(swaggerDocument));
+
 
 //Rotas de Cards
 route.get('/all-cards',cardController.findAllCardsController)
