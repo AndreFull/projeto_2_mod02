@@ -16,7 +16,7 @@ app.use(cors());
 app.use('/cards', route);
 
 app.get('/',(req,res) => {
-    res.send('Hello World');
+    res.send('Agora Vai');
 })
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
